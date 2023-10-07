@@ -101,3 +101,5 @@ struct ContentView_Previews: PreviewProvider {
             .loader(isShow: .constant(true), text: "Loading...")
     }
 }
+
+

@@ -8,8 +8,9 @@ LoaderView is a SwiftUI component that provides a customizable loading indicator
 ## Installation
 To use LoaderView in your SwiftUI project, copy the `LoaderView.swift` file into your project directory and use this modifier.
 
+
 ```swift
-.loader(isShow: $isLoading)
+    .loader(isShow: $isLoading)
 ```
 
 ## Usage
@@ -21,25 +22,25 @@ You can use LoaderView in your SwiftUI project in two different ways:
 import SwiftUI
 
 struct ContentView: View {
-@State private var isLoading = false
-
-var body: some View {
-VStack {
-Text("Hello, LoaderView!")
-.padding()
-
-Button("Show Loader") {
-isLoading.toggle()
-}
-.loader(isShow: $isLoading, text: "Loading...")
-}
-}
+    @State private var isLoading = false
+    
+    var body: some View {
+        VStack {
+            Text("Hello, LoaderView!")
+                .padding()
+            
+            Button("Show Loader") {
+                isLoading.toggle()
+            }
+            .loader(isShow: $isLoading, text: "Loading...")
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
-static var previews: some View {
-ContentView()
-}
+    static var previews: some View {
+        ContentView()
+    }
 }
 ```
 
@@ -49,41 +50,42 @@ ContentView()
 import SwiftUI
 
 struct ContentView: View {
-@State private var otp: String = ""
-@FocusState private var isOTPFieldFocused: Bool
-private let numberOfFieldsInOTP = 6
-
-var body: some View {
-
-VStack(alignment: .leading, spacing: 8) {
-Text("VERIFICATION CODE")
-.foregroundColor(Color.gray)
-.font(.system(size: 12))
-
-OTPFieldView(numberOfFields: numberOfFieldsInOTP, otp: $otp)
-.onChange(of: otp) { newOtp in
-if newOtp.count == numberOfFieldsInOTP {
-// Verify OTP
-}
-}
-.focused($isTextFieldFocused)
-
-Text("Entered OTP: \(otp)")
-}
-.onAppear {
-DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-isTextFieldFocused = true
-}
-}
-}
+    @State private var otp: String = ""
+    @FocusState private var isOTPFieldFocused: Bool
+    private let numberOfFieldsInOTP = 6
+    
+    var body: some View {
+        
+        VStack(alignment: .leading, spacing: 8) {
+            Text("VERIFICATION CODE")
+                .foregroundColor(Color.gray)
+                .font(.system(size: 12))
+            
+            OTPFieldView(numberOfFields: numberOfFieldsInOTP, otp: $otp)
+                .onChange(of: otp) { newOtp in
+                    if newOtp.count == numberOfFieldsInOTP {
+                        // Verify OTP
+                    }
+                }
+                .focused($isTextFieldFocused)
+            
+            Text("Entered OTP: \(otp)")
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                isTextFieldFocused = true
+            }
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
-static var previews: some View {
-ContentView()
-}
+    static var previews: some View {
+        ContentView()
+    }
 }
 ```
+
 
 
 ## Customize LoaderView properties as needed:
