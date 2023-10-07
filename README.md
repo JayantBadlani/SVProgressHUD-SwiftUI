@@ -52,30 +52,18 @@ struct ContentView_Previews: PreviewProvider {
 import SwiftUI
 
 struct ContentView: View {
-    @State private var otp: String = ""
-    @FocusState private var isOTPFieldFocused: Bool
-    private let numberOfFieldsInOTP = 6
     
+    @State private var isLoading = false
     var body: some View {
-        
-        VStack(alignment: .leading, spacing: 8) {
-            Text("VERIFICATION CODE")
-                .foregroundColor(Color.gray)
-                .font(.system(size: 12))
+        ZStack {
+            // Your content goes here
+            Text("Welcome to My App")
+                .font(.largeTitle)
+                .foregroundColor(.black)
             
-            OTPFieldView(numberOfFields: numberOfFieldsInOTP, otp: $otp)
-                .onChange(of: otp) { newOtp in
-                    if newOtp.count == numberOfFieldsInOTP {
-                        // Verify OTP
-                    }
-                }
-                .focused($isTextFieldFocused)
-            
-            Text("Entered OTP: \(otp)")
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                isTextFieldFocused = true
+            // Add LoaderView with desired customization
+            if isLoading {
+                LoaderView(text: "Loading...", userInteractionEnable: true, backgroundColor: .white, tintColor: .blue)
             }
         }
     }
