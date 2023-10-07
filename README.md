@@ -80,13 +80,17 @@ struct ContentView_Previews: PreviewProvider {
 
 ## Customize LoaderView properties as needed:
 
-### text: An optional string to display a loading message.
+### text: 
+An optional string to display a loading message.
 
-### userInteractionEnable: A boolean to enable or disable user interaction while the loader is visible.
+### userInteractionEnable: 
+A boolean to enable or disable user interaction while the loader is visible.
 
-### backgroundColor: The background color of the loader (default is .white).
+### backgroundColor: 
+The background color of the loader (default is .white).
 
-### tintColor: The color of the loader's animated circle (default is .black).
+### tintColor: 
+The color of the loader's animated circle (default is .black).
 
 Feel free to customize and enhance LoaderView according to your specific use case, and enjoy its user-friendly features in your SwiftUI app!
 
