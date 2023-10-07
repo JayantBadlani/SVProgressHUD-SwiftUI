@@ -1,8 +1,8 @@
 # SVProgressHUD-SwiftUI
 SVProgressHUD_SwiftUI is a clean and easy-to-use HUD meant to display the progress of an ongoing task in SwiftUI apps
 
-https://github.com/JayantBadlani/SVProgressHUD-SwiftUI/assets/37996543/40449a3d-486f-4395-9743-d010be563190
-https://github.com/JayantBadlani/SVProgressHUD-SwiftUI/assets/37996543/afd40539-a189-41ed-a1d6-ebe1596d98f8
+![ezgif com-video-to-gif](https://github.com/JayantBadlani/SVProgressHUD-SwiftUI/assets/37996543/c2e57686-6e91-4449-a7f7-d09ba12d0391)
+![ezgif com-video-to-gif (1)](https://github.com/JayantBadlani/SVProgressHUD-SwiftUI/assets/37996543/a921c8a1-6e82-48e6-8d7b-cd790e950507)
 
 ### Description
 LoaderView is a SwiftUI component that provides a customizable loading indicator for your iOS app. It's designed to give you full control over the loader's appearance and behavior, making it easy to integrate and use in your SwiftUI projects. Similar to popular libraries like SVProgressHUD, LoaderView is entirely written in SwiftUI.
